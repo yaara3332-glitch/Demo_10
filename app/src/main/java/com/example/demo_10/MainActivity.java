@@ -54,11 +54,47 @@ public class MainActivity extends AppCompatActivity {
         {
             number = Double.parseDouble(txt);
         }
-
-
-
     }
 
+    public void clear(View view) {
+        number = 0.0;
+        opernd = "";
+        display.setText("");
+    }
+
+    public void plusnum(View view)
+    {
+        calculate();
+        opernd = "plus";
+        display.setText("");
+    }
+
+    public void minusnum(View view)
+    {
+        calculate();
+        opernd = "minus";
+        display.setText("");
+    }
+
+    public void multnum(View view)
+    {
+        calculate();
+        opernd = "mult";
+        display.setText("");
+    }
+
+    public void divnum(View view)
+    {
+        calculate();
+        opernd = "div";
+        display.setText("");
+    }
+
+    public void equals(View view)
+    {
+        calculate();
+        display.setText(String.valueOf(number));
+        opernd = "";
+    }
 
 }
-
